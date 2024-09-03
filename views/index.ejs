@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,INFM@0,600,-9,26;1,600,-9,26&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card" >
+        <h1>
+            Cat Facts 
+        </h1>
+        <div style="position: relative;">
+            <%if(!locals.data){%>
+                <a href="/fact"><img src="/style/Screenshot 2024-09-03 at 3.51.27 PM.png"  ></a>
+            <%}else{%>
+                <a href="/fact"><img src="<%= data.url%>"></a>
+            <%}%>
+            <div class="overlay-text"><%= data.fact%></div>
+        </div>
+    </div>
+    
+</body>
+</html>
